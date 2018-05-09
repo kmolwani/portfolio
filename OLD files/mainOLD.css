@@ -26,7 +26,6 @@ header {
   height: 90px;
   text-align: left;
   position: absolute;
-  border-radius: 50px;
 }
 /* ///////////////////////////////////////////////////////////////////////////// */
 
@@ -35,94 +34,60 @@ header {
 .protfolio__image {
   margin: 3% 0 0 0;
   width: 100%;
-  height: 500px;
-  background-image: url("images/Porfolio_image.png");
+  height: 400px;
+  background-image: url("https://scontent.fatl1-1.fna.fbcdn.net/v/t1.0-9/31531318_1631888270181445_600869364979204096_n.jpg?_nc_cat=0&oh=0712c37c47f283078268a3bf39e67124&oe=5B59D1F0");
   background-size: 100% 100%;
   border: 1px solid black;
+  box-shadow: 0px 3px 20px 10px grey;
   border-radius: 50px;
   display: flex;
   flex-wrap: wrap;
 }
-
-.figcaption {
-  font-size: 0.75em;
-  font-style: italic;
-}
 /* ///////////////////////////////////////////////////////////////////////////// */
 
-/* ////////////////////////////////// About Me ///////////////////////////////// */
-/* ///////////////////////////////////////////////////////////////////////////// */
-.about_me {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-around;
-}
-
-.information {
-  text-transform: uppercase;
-  width: 100%;
-  text-align: center;
-  padding-top: 15%;
-}
-
-.profile_image {
-  width: 100%;
-  max-width: 400px;
-  height: 400px;
-  border-radius: 50px;
-  -ms-transform: skewY(10deg); /* IE 9 */
-  -webkit-transform: skewY(10deg); /* Safari 3-8 */
-  transform: skewY(10deg);
-  box-shadow: 20px 20px 30px 0px grey;
-  border: 2px solid black;
-}
-
-/* ///////////////////////////////////////////////////////////////////////////// */
 
 /* ///////////////////////////// Featured Work ///////////////////////////////// */
 /* ///////////////////////////////////////////////////////////////////////////// */
-.featured__work, .about {
-  width: 100%;
+.featured__work {
   text-transform: uppercase;
-  padding: 2% 0 1% 0;
+  color: #7d97ad;
+  width: 100%;
   text-decoration: underline;
-  color: orange;
+}
+
+#project_1 {
+  width: 85%;
+  height: 200px;
+  border: 1px solid black;
+  border-radius: 15px;
+}
+
+#project_2 {
+  width: 75%;
+  height: 200px;
+  border: 1px solid black;
+  border-radius: 15px;
+}
+
+#project_3 {
+  width: 70%;
+  height: 200px;
+  border: 1px solid black;
+  border-radius: 15px;
+}
+
+.project_anchor_1, .project_anchor_2, .project_anchor_3 {
+  font-size: 15px;
+}
+
+.project_anchor_1, .project_anchor_2, .project_anchor_3, #project_1, #project_2, #project_3{
+  float: right;
 }
 
 #project_list {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
-.project_image {
-  width: 100%;
-  max-width: 275px;
-  height: 200px;
-  border: 1px solid grey;
-  border-radius: 10px;
-}
-
-h4 {
-  text-align: center;
-  width: 100%;
-}
-
-.project_image:hover {
-  transform: scale(0.9, 0.9);
-  transition: all 0.3s ease 0s;
-}
-
-.pro_1 {
-  order: -1;
-}
-
-.pro_2 {
-  order: -2;
-}
-
-.pro_3 {
-  order: 0;
+  flex-wrap: nowrap;
+  position: relative;
 }
 /* ///////////////////////////////////////////////////////////////////////////// */
 
@@ -140,17 +105,13 @@ footer {
 @media screen and (max-width: 499px) {
   .header__title {
     width: 490px;
-    margin: 0 0 0 25%;
+    margin: 0 0 0 30%;
   }
   .protfolio__image {
     margin: 5% 0 0 0;
     height: 250px;
     width: 100%;
-    background-size: 100% 100%;
-  }
-  .profile_image {
-    width: 80%;
-    height: 80%;
+    background-size: 100% 80%;
   }
 }
 
@@ -174,6 +135,10 @@ footer {
     width: 100%;
     height: 400px;
   }
+  #project_list {
+    width: 100%;
+    margin: 0 0 5% 0;
+  }
 }
 
 @media screen and (min-width: 900px) {
@@ -181,51 +146,71 @@ footer {
     width: 80%;
     margin: 0 0 0 30%;
   }
-  header, .figcaption {
+  header {
     width: 80%;
     margin: 0 10% 0 10%;
   }
   .protfolio__image {
     width: 80%;
-    height: 500px;
+    height: 400px;
     margin: 3% 10% 0 10%;
   }
-  .featured__work, .about {
+  .featured__work {
     margin: 0 10% 0 10%;
     width: 80%;
   }
-  #project_list, .about_me {
+  #project_list {
+    width: 100%;
+    margin: 0 0 5% 0;
+  }
+}
+
+@media screen and (max-width: 750px) {
+
+  #project_list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  #project_1, #project_2, #project_3, .project_anchor_1, .project_anchor_2, .project_anchor_3 {
+    /* flex-wrap: nowrap; */
     width: 80%;
     margin: 0 10% 0 10%;
   }
+
+  .pro_1 {
+    width: 100%;
+    margin: 0 0 10% 0;
+  }
+  .pro_2 {
+    width: 100%;
+    margin: 0 0 10% 0;
+  }
+  .pro_3 {
+    width: 100%;
+    margin: 0 0 10% 0;  }
 }
-@media screen and (min-width: 900px) and (max-width: 1050px) {
-  .about_me {
+
+@media screen and (min-width: 500px) and (max-width: 750px) {
+
+  #project_list {
+    display: flex;
     flex-wrap: wrap;
+    text-align: center;
   }
-  .information {
-    padding-top: 0;
+
+  .pro_1 {
+    width: 100%;
+    order: 1;
+    margin: 0 0 10% 0;
   }
-  .profile_image{
-    -ms-transform: skewY(0deg); /* IE 9 */
-    -webkit-transform: skewY(0deg); /* Safari 3-8 */
-    transform: skewY(0deg);
+  .pro_2 {
+    width: 100%;
+    order: -1;
+    margin: 0 0 10% 0;
+  }
+  .pro_3 {
+    width: 100%;
   }
 }
-
-@media screen and (max-width: 765px) {
-  .about_me {
-    flex-wrap: wrap;
-  }
-  .information {
-    padding-top: 0;
-  }
-  .profile_image{
-    -ms-transform: skewY(0deg); /* IE 9 */
-    -webkit-transform: skewY(0deg); /* Safari 3-8 */
-    transform: skewY(0deg);
-  }
-}
-
-
 /* ///////////////////////////////////////////////////////////////////////////// */
