@@ -44,6 +44,10 @@ header {
   flex-wrap: wrap;
 }
 
+section {
+  text-align: center;
+}
+
 .figcaption {
   font-size: 0.75em;
   font-style: italic;
@@ -188,7 +192,7 @@ footer {
   }
   .protfolio__image {
     width: 80%;
-    height: 500px;
+    height: 580px;
     margin: 3% 10% 0 10%;
   }
   .featured__work, .about {
